@@ -4,27 +4,27 @@
 </template>
 
 <script>
-// import { reactive, computed } from 'vue'
+import { reactive, computed } from 'vue'
 
 export default {
-  name: 'ReactiveCounter'
-  // setup () {
-  //   const data = reactive({
-  //     counter: 0,
-  //     counterComputed: computed(() => {
-  //       const result = `El valor de counter es ${data.counter}`
-  //       return result
-  //     })
-  //   })
+  name: 'ReactiveCounter',
+  setup () {
+    const data = reactive({
+      counter: 0,
+      counterComputed: computed(() => {
+        const result = `El valor de counter es ${data.counter}`
+        return result
+      })
+    })
 
-  //   const increment = () => {
-  //     counter.value++
-  //   }
-  //   const decrement = () => {
-  //     counter.value--
-  //   }
-  //   return { counterComputed, increment, decrement }
-  // }
+    const increment = () => {
+      data.counter++
+    }
+    const decrement = () => {
+      data.counter--
+    }
+    return { data, increment, decrement }
+  }
 }
 </script>
 
