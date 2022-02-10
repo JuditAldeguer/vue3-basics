@@ -9,6 +9,8 @@
     <Watcher />
      <hr />
     <SimpleCountercompositionApi />
+    <hr/>
+    <SimpleFetch/>
   </div>
 </template>
 
@@ -19,6 +21,7 @@ import SimpleCounter from '../components/SimpleCounter.vue'
 import ReactiveCounter from '../components/ReactiveCounterr.vue'
 import Watcher from '../components/Watcher.vue'
 import SimpleCountercompositionApi from '../components/SimpleCountercompositionApi.vue'
+import SimpleFetch from '../components/SimpleFetch.vue'
 
 export default {
   name: 'Home',
@@ -27,7 +30,8 @@ export default {
     SimpleCounter,
     ReactiveCounter,
     Watcher,
-    SimpleCountercompositionApi
+    SimpleCountercompositionApi,
+    SimpleFetch
   }
 }
 </script>
