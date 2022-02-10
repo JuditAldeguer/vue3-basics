@@ -1,10 +1,13 @@
 <template>
   <h2>Reactive Counter</h2>
-  {{ data }}
+  <h3>{{ counter }}</h3>
+  <h3>{{ counterComputed }}</h3>
+  <button @click="decrement">Decrementar</button>
+  <button @click="increment">Incrementar</button>
 </template>
 
 <script>
-import { reactive, computed } from 'vue'
+import { reactive, computed, toRefs } from 'vue'
 
 export default {
   name: 'ReactiveCounter',
@@ -23,7 +26,7 @@ export default {
     const decrement = () => {
       data.counter--
     }
-    return { data, increment, decrement }
+    return { ...toRefs(data), increment, decrement }
   }
 }
 </script>
