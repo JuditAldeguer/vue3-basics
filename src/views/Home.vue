@@ -12,7 +12,16 @@
     <hr/>
     <SimpleFetch/>
     <hr/>
-    <SuspenseFetch/>
+    <Suspense>
+      <template #default>
+        <SuspenseFetch/>
+      </template>
+      <template #fallback>
+        <h5>
+          Cargando...
+        </h5>
+      </template>
+    </Suspense>
   </div>
 </template>
 
