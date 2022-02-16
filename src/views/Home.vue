@@ -11,6 +11,8 @@
     <SimpleCountercompositionApi />
     <hr/>
     <SimpleFetch/>
+    <hr/>
+    <SuspenseFetch/>
   </div>
 </template>
 
@@ -22,6 +24,7 @@ import ReactiveCounter from '../components/ReactiveCounterr.vue'
 import Watcher from '../components/Watcher.vue'
 import SimpleCountercompositionApi from '../components/SimpleCountercompositionApi.vue'
 import SimpleFetch from '../components/SimpleFetch.vue'
+import SuspenseFetch from '../components/SuspenseFetch.vue'
 
 export default {
   name: 'Home',
@@ -31,7 +34,8 @@ export default {
     ReactiveCounter,
     Watcher,
     SimpleCountercompositionApi,
-    SimpleFetch
+    SimpleFetch,
+    SuspenseFetch
   }
 }
 </script>
